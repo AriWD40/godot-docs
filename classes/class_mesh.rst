@@ -41,6 +41,8 @@ Methods
 +-----------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
 | :ref:`AABB<class_AABB>`                             | :ref:`get_aabb<class_Mesh_method_get_aabb>` **(** **)** const                                                                                            |
 +-----------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
+| :ref:`AABB<class_AABB>`                             | :ref:`get_transformed_aabb<class_Mesh_method_get_transformed_aabb>` **(** **)** const                                                                    |
++-----------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
 | :ref:`PackedVector3Array<class_PackedVector3Array>` | :ref:`get_faces<class_Mesh_method_get_faces>` **(** **)** const                                                                                          |
 +-----------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
 | :ref:`int<class_int>`                               | :ref:`get_surface_count<class_Mesh_method_get_surface_count>` **(** **)** const                                                                          |
@@ -276,6 +278,14 @@ Generate a :ref:`TriangleMesh<class_TriangleMesh>` from the mesh.
 Returns the smallest :ref:`AABB<class_AABB>` enclosing this mesh. Not affected by ``custom_aabb``.
 
 **Note:** This is only implemented for :ref:`ArrayMesh<class_ArrayMesh>` and :ref:`PrimitiveMesh<class_PrimitiveMesh>`.
+
+----
+
+.. _class_Mesh_method_get_transformed_aabb:
+
+Returns the transformed AABB (also known as the bounding box) for this mesh.
+
+Transformed in this case means the AABB plus the position, rotation, and scale of the Spatial's Transform. 
 
 ----
 
